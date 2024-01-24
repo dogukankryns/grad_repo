@@ -7,6 +7,6 @@ RUN mvn clean package -DskipTests
 # Run Stage
 FROM openjdk:17.0.1-jdk-slim
 WORKDIR /app
-COPY --from=build /app/target/GraduationProject-0.0.1-SNAPSHOT.jar GraduationProject.jar
+COPY --from=build /app/target/FreeECharge-0.0.1-SNAPSHOT.jar GraduationProject.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "GraduationProject.jar"]
